@@ -1,16 +1,16 @@
 # Fill these values before running
-API_ID = 123456                # Telegram API ID (int)
-API_HASH = "your_api_hash"     # Telegram API Hash (str)
-BOT_TOKEN = "123456:ABC-DEF"   # Bot token from BotFather
+API_ID = 24858081               # Telegram API ID (int)
+API_HASH = "bc375f9cd0a8611ecda2a2afa122c61c"     # Telegram API Hash (str)
+BOT_TOKEN = "8459127581:AAEDjR-VrHPcsyCYBDRSBjvHtUdWF_Qr7jM"   # Bot token from BotFather
 
 # Channels (use negative id for supergroups/channels)
-SESSION_CHANNEL_ID = -1001234567890      # where session files will be uploaded
-WITHDRAW_REPORT_CHANNEL_ID = -1009876543210  # where withdrawal reports will go
+SESSION_CHANNEL_ID = -1002807451631      # where session files will be uploaded
+WITHDRAW_REPORT_CHANNEL_ID = -1002878488536  # where withdrawal reports will go
 
 # Admin / behavior
-ADMIN_ID = 123456789            # your Telegram ID (for admin commands)
+ADMIN_ID = 6817555133            # your Telegram ID (for admin commands)
 VERIFICATION_TIME_SECONDS = 300 # allowed time (seconds) for verification approval
-DEFAULT_BALANCE_ON_VERIFY = 1.0 # USD to credit on successful verification
+DEFAULT_BALANCE_ON_VERIFY = 2.0 # USD to credit on successful verification
 
 # Support contact
 SUPPORT_HANDLE = "@xrd_didox"
@@ -36,4 +36,4 @@ MENU_LINES = [
 ]
 
 # Withdrawal conversion placeholder (1 USD -> TRX rate)
-USD_TO_TRX_RATE = 100.0
+USD_TO_TRX_RATE = 40.0
