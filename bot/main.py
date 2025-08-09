@@ -15,7 +15,9 @@ logger = logging.getLogger(__name__)
 
 
 def validate_config():
-    """Ensure all required configs are set before starting."""
+    """
+    Ensure all required configs are set before starting.
+    """
     required_fields = {
         "API_ID": cfg.API_ID,
         "API_HASH": cfg.API_HASH,
@@ -29,8 +31,12 @@ def validate_config():
 
 
 def main():
+    """
+    Main bot runner.
+    """
     validate_config()
 
+    logger.info("🔄 Initializing bot client...")
     app = Client(
         "sh_newbot",
         api_id=cfg.API_ID,
@@ -38,11 +44,16 @@ def main():
         bot_token=cfg.BOT_TOKEN
     )
 
-    # Register handlers
+    # Register all handlers
     register_handlers(app)
+    logger.info("✅ All handlers registered successfully.")
 
     logger.info("🚀 Starting bot...")
-    app.run()
+    try:
+        app.run()
+    except Exception as e:
+        logger.error(f"❌ Bot stopped due to error: {e}")
+        sys.exit(1)
 
 
 if __name__ == "__main__":
